@@ -5,7 +5,8 @@
   "scripts": {
     "build": "npm run build --workspace=client",
     "start": "npm run build && node server/index.js",
-    "dev": "concurrently \"npm start --workspace=client\" \"nodemon server/index.js\""
+    "dev": "concurrently \"npm start --workspace=client\" \"nodemon server/index.js\"",
+    "build:all": "node scripts/build-all.js"
   },
   "devDependencies": {
     "concurrently": "^8.2.0",
