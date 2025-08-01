@@ -1,0 +1,14 @@
+{
+  "name": "fullstack-app",
+  "private": true,
+  "workspaces": ["client", "server"],
+  "scripts": {
+    "build": "npm run build --workspace=client",
+    "start": "npm run build && node server/index.js",
+    "dev": "concurrently \"npm start --workspace=client\" \"nodemon server/index.js\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "nodemon": "^3.0.0"
+  }
+}
